@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             Title="Linear Gradient"
+             x:Class="XamarinFormsFive.Views.LinearGradient"
+             BackgroundColor="Silver">
+      <ContentPage.Resources>
+                  
+        <Color x:Key="DarkBlue">#0091FF</Color>
+        <Color x:Key="LightBlue">#32C5FF</Color>
+        <Color x:Key="VeryLightBlue">#440596FF</Color>
+        <Color x:Key="DarkGreen">#6DD400</Color>
+        <Color x:Key="LightGreen">#44D7B6</Color>
+        <LinearGradientBrush x:Key="BlueGradient" StartPoint="0.8,0.9" EndPoint="0.1,0.2">
+            <GradientStop Color="{StaticResource DarkBlue}" Offset="0.5" />
+            <GradientStop Color="{StaticResource LightBlue}" Offset="1.0" />
+        </LinearGradientBrush>
+        <LinearGradientBrush x:Key="GreenGradient" StartPoint="0.1,0.1" EndPoint="0.9,0.9">
+            <GradientStop Color="{StaticResource DarkGreen}" Offset="0.5" />
+            <GradientStop Color="{StaticResource LightGreen}" Offset="1.0" />
+        </LinearGradientBrush>
+
+        <Style TargetType="Frame">
+            <Setter Property="HasShadow" Value="True" />
+            <Setter Property="CornerRadius" Value="20" />
+            <!--Setter Property="BackgroundColor" Value="{AppThemeBinding Light=White, Dark=#333333}" /-->
+        </Style>
+      </ContentPage.Resources>
+    <Grid Margin="15" VerticalOptions="Center">
+        <Grid RowDefinitions="80,80,30,100" ColumnDefinitions="*" RowSpacing="15">
+            <Frame Grid.Row="0" >
+                <Label Text="Blue Brush"
+                       TextColor="White"
+                       FontAttributes="Bold"
+                       FontSize="Large"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center" />
+            </Frame>
+
+            <Frame Grid.Row="1" >
+                <Label Text="Green Brush"
+                       FontSize="Large"
+                       TextColor="White"
+                       FontAttributes="Bold"
+                       HorizontalOptions="CenterAndExpand"
+                       VerticalOptions="CenterAndExpand" />
+            </Frame>
+            <Frame  Grid.Row="3" HasShadow="True" WidthRequest="250" BorderColor="White" BackgroundColor="Orange" VerticalOptions="Center" HorizontalOptions="Center">
+                <Label Text="Linear Gradient" TextColor="White" HorizontalOptions="Center" HorizontalTextAlignment="Center" FontSize="35" />
+            </Frame>
+        </Grid>
+    </Grid>
+</ContentPage>

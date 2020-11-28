@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Shell xmlns="http://xamarin.com/schemas/2014/forms"
+       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+       x:Class="XamarinFormsFive.AppShell"
+       xmlns:pages="clr-namespace:XamarinFormsFive.Views"
+       xmlns:theme="clr-namespace:ThemeGallery"
+       Title="XamarinForms Gradients">
+<Shell.Resources>
+        <Style x:Key="GradientShell"
+               TargetType="Element">
+            <Setter Property="Shell.BackgroundColor"
+                    Value="#C0C0C0" />
+            <Setter Property="Shell.ForegroundColor"
+                    Value="#9556F5" />
+            <Setter Property="Shell.TitleColor"
+                    Value="White" />
+            <Setter Property="Shell.DisabledColor"
+                    Value="#A6C6F5" />
+            <Setter Property="Shell.UnselectedColor"
+                    Value="#C5B4F4" />
+        </Style>
+        <Style TargetType="ShellItem"
+               BasedOn="{StaticResource GradientShell}" />
+        <Style x:Key="BlueMSShell"
+               TargetType="Element"
+               BasedOn="{StaticResource GradientShell}">
+            <Setter Property="Shell.BackgroundColor"
+                    Value="#3B83BD" />
+        </Style>
+        
+ </Shell.Resources>
+
+    <ShellContent Route="Solid Gradient"
+                  Title="Solid Gradient"
+                  ContentTemplate="{DataTemplate pages:SolidGradient}" >
+        <ShellContent.Icon>
+            <FontImageSource
+                FontFamily="FontAwesome"
+                Glyph="{x:Static theme:IconFont.Brush}"
+                Size="18"/>
+        </ShellContent.Icon>
+    </ShellContent>
+
+    <ShellContent Route="Linear Gradient"
+                  Title="Linear Gradient"
+                  ContentTemplate="{DataTemplate pages:LinearGradient}" >
+        <ShellContent.Icon>
+            <FontImageSource
+                FontFamily="FontAwesome"
+                Glyph="{x:Static theme:IconFont.ExternalLinkAlt}"
+                Size="18"/>
+        </ShellContent.Icon>
+    </ShellContent>
+
+    <ShellContent Route="Radial Gradient"
+                  Title="Radial Gradient"
+                  ContentTemplate="{DataTemplate pages:RadialGradient}" >
+        <ShellContent.Icon>
+            <FontImageSource
+                FontFamily="FontAwesome"
+                Glyph="{x:Static theme:IconFont.EllipsisH}"
+                Size="18"/>
+        </ShellContent.Icon>
+    </ShellContent>
+
+    <ShellContent Route="Shapes Gradient"
+                  Title="Shapes Gradient"
+                  ContentTemplate="{DataTemplate pages:ShapesGradient}" >
+        <ShellContent.Icon>
+            <FontImageSource
+                FontFamily="FontAwesome"
+                Glyph="{x:Static theme:IconFont.Shapes}"
+                Size="18"/>
+        </ShellContent.Icon>
+    </ShellContent>
+
+    <ShellContent Route="Animated Gradient"
+                  Title="Animated Gradient"
+                  ContentTemplate="{DataTemplate pages:AnimatedGradient}" >
+        <ShellContent.Icon>
+            <FontImageSource
+                FontFamily="FontAwesome"
+                Glyph="{x:Static theme:IconFont.TruckMoving}"
+                Size="18"/>
+        </ShellContent.Icon>
+    </ShellContent>
+</Shell>
+

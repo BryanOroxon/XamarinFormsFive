@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    x:Class="XamarinFormsFive.Views.ShapesGradient"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="Shapes Gradients">
+    <ContentPage.Background>
+        <LinearGradientBrush StartPoint="0.8,0.9" EndPoint="0.1,0.2">
+            <GradientStop Offset="0.5" Color="MediumPurple" />
+            <GradientStop Offset="1.0" Color="Black" />
+        </LinearGradientBrush>
+    </ContentPage.Background>
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout
+                VerticalOptions="Center"
+                HorizontalOptions="Center">
+                <Line
+                    X1="0"
+                    Y1="20"
+                    X2="450"
+                    Y2="35"
+                    StrokeLineCap="Round"
+                    StrokeThickness="20">
+                </Line>
+                
+
+                <Line
+                    X1="0"
+                    Y1="20"
+                    X2="450"
+                    Y2="45"
+                    StrokeLineCap="Round"
+                    StrokeThickness="20">
+                    <Line.Stroke>
+                        <LinearGradientBrush StartPoint="0.1,0.2" EndPoint="0.8,0.9">
+                            <GradientStop Offset="0.5" Color="#0091FF" />
+                            <GradientStop Offset="1.0" Color="#6DD400" />
+                        </LinearGradientBrush>
+                    </Line.Stroke>
+                </Line>
+                <Frame
+                    Grid.Row="3"
+                    Margin="20"
+                    HasShadow="True"
+                    WidthRequest="250"
+                    CornerRadius="20"
+                    BorderColor="White"
+                    BackgroundColor="Transparent"
+                    VerticalOptions="Center"
+                    HorizontalOptions="Center">
+                    <Label
+                        Text="Shapes Gradient"
+                        TextColor="White"
+                        HorizontalOptions="Center"
+                        HorizontalTextAlignment="Center"
+                        FontSize="35" />
+                </Frame>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
